@@ -1,2 +1,18 @@
-<%= render 'info',user:@user, book:@book_new %>
+<div class="container px-5 px-sm-0">
+  <div class="row">
+  <%= render 'info',user:@user, book:@book_new %>
 
+  <div class="col-md-8 offset-md-1">
+      <h2>Book detail</h2>
+      <table class="table">
+          <tbody>
+              <tr>
+                  <td><%= link_to user_path(@user.id) do %></td>
+                  <%= image_tag @book.user.get_profile_image(45,45) %>
+                  <% end %>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+ </div>
+</div>
