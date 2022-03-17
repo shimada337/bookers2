@@ -7,16 +7,16 @@
       <table class="table">
           <tbody>
               <tr>
-                  <td><%= link_to user_path(@user.id) do %>
+                <td><%= link_to user_path(@user.id) do %>
                   <%= image_tag @book.user.get_profile_image(45,45) %><br>
                   <%= @book.user.name %>
-                  <% end %></td>
+                <% end %></td>
                   <td><%= link_to @book.title %></td>
                   <td><%= @book.body %></td>
-                  <% if @book.user == current_user %>
+                <% if @book.user == current_user %>
                   <td><%= link_to "Edit", edit_book_path(@book.id), class:"btn btn-sm btn-success" %></td>
                   <td><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？", class:"btn btn-sm btn-danger" %> </td>
-                  <% end %>
+                <% end %>
               </tr>
           </tbody>
       </table>
